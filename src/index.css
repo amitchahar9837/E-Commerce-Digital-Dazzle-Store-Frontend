@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+  @apply bg-slate-100;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.usertable{
+  @apply bg-white
+}
+.usertable th{
+  @apply border text-base font-medium
+}
+.productForm input, .productForm select, .productForm textarea{
+  @apply bg-slate-100 w-full p-2 outline-none rounded border
+}
+.usertable td{
+  @apply border text-base text-center
+}
+
+.noScrollbar::-webkit-scrollbar{
+  display: none;
+}
