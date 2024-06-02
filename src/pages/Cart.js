@@ -117,15 +117,16 @@ const Cart = () => {
         </>
       )}
       <div className='flex justify-between gap-4 lg:flex-row flex-col p-4 min-h-[calc(100vh-120px)]'>
-        <div className='w-full max-w-3xl min-h-[calc(100vh-90px)] max-h-[calc(100vh-90px)] overflow-y-scroll noScrollbar'>
+        <div className='w-full max-w-3xl max-h-[calc(100vh-90px)] overflow-y-scroll noScrollbar'>
           {loading ? (
             loadingItem.map((el, index) => (
               <div key={"loading " + index} className='h-32 my-2 border border-slate-300 w-full bg-slate-200 animate-pulse'></div>
             ))
           ) : (
             data.map((product, index) => (
-              <div key={product._id + index} className='h-32 my-2 border border-slate-300 w-full bg-white grid grid-cols-[128px,1fr] relative'>
-                <Link to={'/product/'+product?.productId?._id} className='w-32 h-32 bg-slate-200'>
+              
+              <div key={product._id + index} className='h-fit sm:h-32 my-2 border border-slate-300 w-full bg-white grid grid-cols-1 sm:grid-cols-[128px,1fr] relative '>
+                <Link to={'/product/'+product?.productId?._id} className='w-full sm:w-32 h-32 bg-slate-200'>
                   <img src={product?.productId?.productImage[0]} alt="" className='w-full h-full mix-blend-multiply object-scale-down' />
                 </Link>
 
@@ -133,7 +134,7 @@ const Cart = () => {
                 <button className='absolute top-2 right-2 p-2 text-red-600 text-2xl rounded-full hover:text-white hover:bg-red-600' onClick={() => deleteItem(product?._id)}>
                   <MdDelete />
                 </button>
-                <div className='px-2 py-1 md:px-4 md:py-2'>
+                <div className='px-2 py-1 md:px-4 md:py-'>
                   <Link to={'/product/'+product?.productId?._id} className='text-lg lg:text-xl line-clamp-1'>{product?.productId?.productName}</Link>
                   <p className='text-slate-500 capitalize'>{product?.productId?.category}</p>
 

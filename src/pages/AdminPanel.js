@@ -23,7 +23,7 @@ const AdminPanel = () => {
     window.scrollTo(0, 0);
   }, [])
   return (
-    <div className='flex w-full min-h-[calc(100vh-120px)] p-2 bg-red-100 items-start gap-2 md:gap-0 relative'>
+    <div className='flex  flex-col md:flex-row w-full min-h-[calc(100vh-120px)] p-2 items-start gap-2 md:gap-0 relative'>
       <button className='block md:hidden text-2xl font-semibold my-4 hover:text-red-500' onClick={()=>setShowAside(prev =>!prev)}><GiHamburgerMenu /></button>
       <aside style={showAside ? {display:'inline-block',position:'absolute',top:'0px',left:'0px',zIndex:'10'} : {}} className='hidden md:flex flex-col w-full max-w-60 h-full min-h-[calc(100vh-90px)] bg-white shadow-[5px_0px_5px_rgba(0,0,0,0.1)] relative'>
         <button className="hover:text-red-500 text-2xl absolute top-3 right-3 inline-block md:hidden" onClick={()=>setShowAside(prev =>!prev)}>

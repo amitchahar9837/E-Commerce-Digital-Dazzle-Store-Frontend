@@ -38,8 +38,8 @@ const AdminDashboard = () => {
   return (
     <div className='w-full min-h-[calc(100vh-90px)] px-2'>
       <h2 className='font-medium text-2xl pb-5'>Dashboard</h2>
-      <div className='flex gap-4 flex-wrap'>
-        <div className='w-80 h-36 bg-blue-400 rounded'>
+      <div className='grid gap-4 grid-cols-[repeat(auto-fill,minmax(300px,1fr))]'>
+        <div className=' h-36 bg-blue-400 rounded'>
           <div className='flex justify-between items-center px-2 py-4'>
             <div className='flex flex-col gap-2'>
               <h1 className='text-4xl font-semibold text-white'>{totalUser}</h1>
@@ -52,7 +52,7 @@ const AdminDashboard = () => {
           <Link to={'/admin-panel/all-users'} className='inline-block p-2 w-full bg-blue-500 text-white'>More Info</Link>
  
         </div>
-        <div className='w-80 h-36 bg-green-400 rounded'>
+        <div className=' h-36 bg-green-400 rounded'>
           <div className='flex justify-between items-center px-2 py-4'>
             <div className='flex flex-col gap-2'>
               <h1 className='text-4xl font-semibold text-white'>1</h1>
@@ -66,7 +66,7 @@ const AdminDashboard = () => {
           <Link to={'/admin-panel/all-users'} className='inline-block p-2 w-full bg-green-500 text-white'>More Info</Link>
 
         </div>
-        <div className='w-80 h-36 bg-yellow-400 rounded'>
+        <div className=' h-36 bg-yellow-400 rounded'>
           <div className='flex justify-between items-center px-2 py-4'>
             <div className='flex flex-col gap-2'>
               <h1 className='text-4xl font-semibold text-white'>{totalProduct}</h1>

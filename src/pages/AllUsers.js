@@ -33,26 +33,26 @@ const AllUsers = () => {
     }, []);
 
     return (
-        <div>
+        <div className='overflow-auto'>
             <table className='w-full usertable'>
                 <tr className='bg-black text-white'>
-                    <th>Sr.</th>
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>Role</th>
-                    <th>Created Date</th>
-                    <th>Action</th>
+                    <th className='p-2 whitespace-nowrap'>Sr.</th>
+                    <th className='p-2 whitespace-nowrap'>Name</th>
+                    <th className='p-2 whitespace-nowrap'>Email</th>
+                    <th className='p-2 whitespace-nowrap'>Role</th>
+                    <th className='p-2 whitespace-nowrap'>Created Date</th>
+                    <th className='p-2 whitespace-nowrap'>Action</th>
                 </tr>
                 <tbody>
                     {
                         allUsers.map((data, index) => (
-                            <tr key={index}>
-                                <td>{index + 1}</td>
-                                <td>{data?.name}</td>
-                                <td>{data?.email}</td>
-                                <td>{data?.role}</td>
-                                <td>{moment(data?.createdAt).format('ll')}</td>
-                                <td>
+                            <tr key={index} className={(index + 1) % 2 === 0 ? 'bg-gray-100' : 'bg-white'}>
+                                <td className='whitespace-nowrap p-2'>{index + 1}</td>
+                                <td className='whitespace-nowrap p-2'>{data?.name}</td>
+                                <td className='whitespace-nowrap p-2'>{data?.email}</td>
+                                <td className='whitespace-nowrap p-2'>{data?.role}</td>
+                                <td className='whitespace-nowrap p-2'>{moment(data?.createdAt).format('ll')}</td>
+                                <td className='whitespace-nowrap p-2'>
                                     <button
                                         onClick={() => {
                                             setUserUpdateData(data);
