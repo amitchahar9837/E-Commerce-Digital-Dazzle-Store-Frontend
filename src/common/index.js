@@ -1,4 +1,5 @@
 const domain = 'https://e-commerce-digital-dazzle-store-backend.onrender.com';
+
 const summaryApi = {
     signup:{
         url:`${domain}/signup`,

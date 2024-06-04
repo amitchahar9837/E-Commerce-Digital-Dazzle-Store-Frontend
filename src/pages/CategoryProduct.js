@@ -52,7 +52,6 @@ const CategoryProduct = () => {
   };
 
   useEffect(() => {
-    console.log(filterCategoryList)
     fetchProduct();
   }, [filterCategoryList]);
 

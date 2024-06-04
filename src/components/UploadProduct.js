@@ -108,7 +108,7 @@ const UploadProduct = ({
                             data?.productImage?.length > 0 ? (
                                 data.productImage.map((el, index) => (
                                     <div key={index} className='relative group'>
-                                        <div className='min-h-20 max-h-20 min-w-20 max-w-20 bg-slate-100 flex justify-center items-center cursor-pointer overflow-hidden'><img title='Open Full Screen' src={el} alt="" className='object-scale-down w-full h-full' onClick={() => {
+                                        <div className='h-20 max-h-20 min-w-20 max-w-20 bg-slate-100 flex justify-center items-center cursor-pointer overflow-hidden'><img title='Open Full Screen' src={el} alt="" className='object-scale-down w-full h-full' onClick={() => {
                                             setOpenFullScreenImage(true);
                                             setFullScreenImage(el);
                                         }} /></div>
