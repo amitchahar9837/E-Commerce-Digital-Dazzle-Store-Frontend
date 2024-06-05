@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import loginIcon from 'assets/signin.gif'
 import { Link, useNavigate } from 'react-router-dom'
-import imageToBase64 from 'helpers/imageToBase64'
 import summaryApi from 'common'
 import { toast } from 'react-toastify'
+import uploadImage from 'helpers/uploadImage'
 
 
 const Signup = () => {
@@ -26,11 +26,11 @@ const handleInput = (e)=>{
 const handleUploadPic = async (e) =>{
   const file = e.target.files[0];
 
-  const imagePic =await  imageToBase64(file);
+  const imagePic =await  uploadImage(file);
 
   setInputs(prev =>({
     ...prev,
-    profilePic: imagePic,
+    profilePic: imagePic.url,
   }))
 }
 
