@@ -112,7 +112,7 @@ const signupApi = ()=>{
                         </div>
 
                         <p className='block w-fit ml-auto'>Already have an account? <Link to={'/login'} className='text-red-600 hover:text-red-700 hover:underline'>login</Link></p>
-                        <button className='bg-red-600 text-white px-6 py-2 max-w-[150px] rounded-full hover:scale-110 transition-all mx-auto block '>Login</button>
+                        <button className='bg-red-600 text-white px-6 py-2 max-w-[150px] rounded-full hover:scale-110 transition-all mx-auto block '>Signup</button>
 
                     </form>
                 </div>
