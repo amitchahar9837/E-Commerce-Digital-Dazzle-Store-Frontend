@@ -76,7 +76,7 @@ const Header = () => {
                                     user?.role === Role.Admin ? (
                                         <Link to={'/admin-panel/dashboard'} className='hover:bg-slate-50 p-2 text-nowrap'>Admin Panel</Link>
                                     ) : (
-                                        <Link to={'/profile'} className='hover:bg-slate-50 p-2 text-nowrap'>Profile</Link>
+                                        <Link to={'/'} className='hover:bg-slate-50 p-2 text-nowrap'>Profile</Link>
                                     )
                                 }
                             </div>
